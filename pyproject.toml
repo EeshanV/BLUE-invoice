@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoice-format-extractor"
+version = "0.1.0"
+description = "Extract structured invoice and PO data from PDF documents."
+authors = [
+  { name="Eeshan V", email="eeshanv@nationanalytics.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "pdfplumber"
+]
+
+[project.urls]
+Homepage = "https://github.com/EeshanV/invoice-format-extractor"
