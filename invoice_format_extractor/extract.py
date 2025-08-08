@@ -112,8 +112,7 @@ def parse_and_stream_pos(pdf_path, output_path):
             elif detail_desc_match and current_item:
                 parsing_detail_description = True
                 desc_text = detail_desc_match.group(1).strip()
-                if desc_text.endswith("Remaining .00"):
-                    desc_text = desc_text[:-len("Remaining .00")].strip()
+                desc_text = re.sub(r"\s+Remaining\s\d+\.\d{2}$", "", desc_text).strip()
                 current_item["description"] = desc_text
             elif current_item and parsing_detail_description:
                 is_stopper = any(line.startswith(kw) for kw in stopper_keywords) or gl_account_line_re.match(line)
