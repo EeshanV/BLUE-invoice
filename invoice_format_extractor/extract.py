@@ -49,6 +49,9 @@ def parse_and_stream_pos(pdf_path, output_path):
                 item['description'] = " ".join(item['description'].split())
             if 'category' in item and item['category']:
                 item['category'] = " ".join(item['category'].split())
+            if item.get('quantity') is not None and item.get('unit_price') is not None:
+                total = item['quantity'] * item['unit_price']
+                item['total_amount'] = round(total, 2)
 
     with open(output_path, 'w') as f_out:
         f_out.write('[\n')
@@ -113,7 +116,9 @@ def parse_and_stream_pos(pdf_path, output_path):
                 current_item = {
                     "line_item_number": int(item_match.group(1)),
                     "category": item_match.group(2).strip(),
-                    "description": "", "quantity": None, "unit_price": None
+                    "description": "", "quantity": None, 
+                    "unit_price": None,
+                    "total_amount": None
                 }
                 current_po["items"].append(current_item)
                 parsing_item_category = True
