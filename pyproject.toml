@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "invoice-format-extractor"
+name = "BLUE-invoice"
 version = "0.1.0"
 description = "Extract structured invoice and PO data from PDF documents."
 authors = [
@@ -16,4 +16,4 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/EeshanV/invoice-format-extractor"
+Homepage = "https://github.com/EeshanV/BLUE-invoice"
