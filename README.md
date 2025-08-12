@@ -1,4 +1,4 @@
-# invoice-format-extractor
+# BLUE-Invoice-extractor
 
 A Python package to extract structured purchase order and invoice data from PDF files.
 
