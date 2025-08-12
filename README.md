@@ -5,7 +5,7 @@ A Python package to extract structured purchase order and invoice data from PDF 
 ## Installation
 
 ```bash
-pip install git+https://github.com/EeshanV/invoice-format-extractor.git
+pip install git+https://github.com/EeshanV/BLUE-invoice.git
 ```
 
 ## Usage
