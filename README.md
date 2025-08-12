@@ -11,7 +11,7 @@ pip install git+https://github.com/EeshanV/BLUE-invoice.git
 ## Usage
 
 ```python
-from invoice_format_extractor import parse_and_stream_pos
+from BLUE-invoice import parse_and_stream_pos
 
 parse_and_stream_pos("example.pdf", "output.json")
 ```
